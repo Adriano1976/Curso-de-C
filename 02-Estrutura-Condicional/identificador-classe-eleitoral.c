@@ -5,21 +5,25 @@ eleitoral: não eleitor (menor que 16 anos de idade), eleitor obrigatório (entr
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(){
+	system ("chcp 1252");
+    
 	int idade;
 	
-	printf("Informe a idade: ");
+	printf("Informe sua idade até: ");
 	scanf("%d", &idade);
 	
-	if (idade < 16){
-		printf("\n Não eleitor");
-	}else{
+	if (idade < 16){	
+		printf("\nNão eleitor");
+	}else{      
 		if ((idade < 18) || (idade > 65)){
-			printf("\n Eleitor facultativo");
-		}else{
-			printf("Eleitor obrigatorio");
+			printf("\nEleitor facultativo");
+		}else{      
+			printf("\nEleitor obrigatório");
 		}
 	}
+	
 	return 0;
 }

@@ -7,13 +7,13 @@ do primeiro número elevado ao segundo. */
 int main(){
 	float num1, num2, total;
 	
-	printf("Informe o primeiro numero: ");
+	printf("Informe o primeiro valor: ");
 	scanf("%f", &num1);
-	printf("informe o segundo numero: ");
+	printf("informe o segundo valor: ");
 	scanf("%f", &num2);
 	
 	total = pow(num1, num2);
 	
-	printf("\nO numero %.2f elevado a %.2f = %.2f", num1, num2, total);
+	printf("\nO valor %.2f elevado a %.2f tem como resultado %.2f", num1, num2, total);
 	return (0);
 }

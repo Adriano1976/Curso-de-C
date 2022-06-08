@@ -14,6 +14,6 @@ int main(){
 	
 	area = ((base1 + base2) * altura) / 2;
 	
-	printf("\nÁrea do trapézio: %.2f", area);
+	printf("\nArea do trapezio: %.2f", area);
 	return (0);
 }

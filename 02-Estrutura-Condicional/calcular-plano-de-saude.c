@@ -15,7 +15,7 @@ int main(){
 	int idade;
 	
 	printf("Informe o nome: ");
-	scanf("%s", nome);
+	scanf("%[^\n]s", nome);
 	printf("Informe a idade: ");
 	scanf("%d", &idade);
 	

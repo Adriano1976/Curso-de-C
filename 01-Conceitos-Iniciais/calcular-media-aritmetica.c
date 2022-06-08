@@ -4,6 +4,7 @@ a média aritmética entre elas. */
 #include <stdio.h>
 
 int main(){
+	
 	float n1, n2, n3, n4, media;
 	
 	printf("Digite a nota 1: ");
@@ -17,7 +18,7 @@ int main(){
 	
 	media = (n1 + n2 + n3 + n4) / 4;
 	
-	printf("\nA media e: %.2f \n", media);
+	printf("\nMedia do Aluno: %.2f \n",  media);	
 	
 	return (0);
 }

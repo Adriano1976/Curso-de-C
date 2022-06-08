@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <locale.h>
+#include <windows.h>
+
+int main(){
+	
+	setlocale(LC_ALL, "Portuguese");
+	SetConsoleOutputCP(1252);
+	SetConsoleCP(1252);
+	
+	char nome[30];
+	
+	printf("Digite um nome: ");
+	scanf("%[^\n]s", nome);
+	
+	printf("\n O nome digitado foi %s", nome);
+	
+	return 0;	
+}
