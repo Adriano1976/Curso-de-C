@@ -1,14 +1,14 @@
-/* No código a seguir, está sendo implementada uma estrutura de pilha em linguagem C. 
-Primeiramente, são incluídas as bibliotecas necessárias, como stdio.h e stdlib.h, 
-além de definida uma constante tamanho igual a 5 para determinar o tamanho máximo da pilha. 
-Em seguida, é declarada a estrutura tpilha, que possui um array de inteiros para armazenar 
-os dados, e duas variáveis ini e fim para indicar o início e o fim da pilha. Após isso, 
-são declaradas as funções para operações básicas em uma pilha, como pilha_entrar() para 
+/* No cÃ³digo a seguir, estÃ¡ sendo implementada uma estrutura de pilha em linguagem C. 
+Primeiramente, sÃ£o incluÃ­das as bibliotecas necessÃ¡rias, como stdio.h e stdlib.h, 
+alÃ©m de definida uma constante tamanho igual a 5 para determinar o tamanho mÃ¡ximo da pilha. 
+Em seguida, Ã© declarada a estrutura tpilha, que possui um array de inteiros para armazenar 
+os dados, e duas variÃ¡veis ini e fim para indicar o inÃ­cio e o fim da pilha. ApÃ³s isso, 
+sÃ£o declaradas as funÃ§Ãµes para operaÃ§Ãµes bÃ¡sicas em uma pilha, como pilha_entrar() para 
 adicionar elementos, pilha_sair() para remover elementos e pilha_mostrar() para exibir o 
-conteúdo da pilha. A função principal main() inicializa a pilha, define um loop que exibe 
-um menu de opções (empilhar, desempilhar ou sair) e realiza a operação escolhida pelo usuário, 
-utilizando switch-case. Cada operação é implementada de acordo com as regras da estrutura de 
-dados de pilha, verificando se a pilha está cheia ou vazia antes de realizar as operações de 
+conteÃºdo da pilha. A funÃ§Ã£o principal main() inicializa a pilha, define um loop que exibe 
+um menu de opÃ§Ãµes (empilhar, desempilhar ou sair) e realiza a operaÃ§Ã£o escolhida pelo usuÃ¡rio, 
+utilizando switch-case. Cada operaÃ§Ã£o Ã© implementada de acordo com as regras da estrutura de 
+dados de pilha, verificando se a pilha estÃ¡ cheia ou vazia antes de realizar as operaÃ§Ãµes de 
 empilhar ou desempilhar, respectivamente. */
 
 
@@ -27,17 +27,17 @@ struct tpilha {
 	int fim;
 };
 
-//Variáveis globais
+//VariÃ¡veis globais
 struct tpilha pilha;
 int op;
 
-//Protipação
+//ProtipaÃ§Ã£o
 void pilha_entrar();
 void pilha_sair();
 void pilha_mostrar();
 void menu_mostrar();
 
-//Função principal
+//FunÃ§Ã£o principal
 int main(){
 	setlocale(LC_ALL, "Portuguese");
 	op = 1;
@@ -65,7 +65,7 @@ int main(){
 //Adicionar um elemento no final da Pilha
 void pilha_entrar(){
 	if (pilha.fim == tamanho) {
-		printf("\nA pilha está cheia, impossível empilhar!\n\n");
+		printf("\nA pilha estÃ¡ cheia, impossÃ­vel empilhar!\n\n");
 		system("pause");
 	}
 	else {
@@ -75,10 +75,10 @@ void pilha_entrar(){
 	}
 }
 
-//Retirar o último elemento da Pilha
+//Retirar o Ãºltimo elemento da Pilha
 void pilha_sair() {
 	if (pilha.ini == pilha.fim) {
-		printf("\nA pilha está vazia, impossível desempilhar!\n\n");
+		printf("\nA pilha estÃ¡ vazia, impossÃ­vel desempilhar!\n\n");
 		system("pause");
 	}
 	else {
@@ -87,7 +87,7 @@ void pilha_sair() {
 	}
 }
 
-//Mostrar o conteúdo da Pilha
+//Mostrar o conteÃºdo da Pilha
 void pilha_mostrar() {
 	int i;
 	printf("[ ");
@@ -97,9 +97,9 @@ void pilha_mostrar() {
 	printf("]\n\n");
 }
 
-//Mostrar o menu de opções
+//Mostrar o menu de opÃ§Ãµes
 void menu_mostrar() {
-	printf("\nEscolha uma opção:\n");
+	printf("\nEscolha uma opÃ§Ã£o:\n");
 	printf("1 - Empilhar\n");
 	printf("2 - Desempilhar\n");
 	printf("0 - Sair\n\n");
