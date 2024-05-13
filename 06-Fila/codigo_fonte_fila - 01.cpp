@@ -1,15 +1,15 @@
-/* No código a seguir, está sendo implementada uma estrutura de fila em C. 
-Inicialmente, são incluídas as bibliotecas necessárias, como stdio.h e stdlib.h, 
-e definida uma constante para o tamanho máximo da fila. A estrutura da fila é 
-definida através de uma struct que armazena os dados, o índice de início e o 
-índice de fim da fila. São declaradas variáveis globais e prototipadas as funções 
-para entrar, sair e mostrar a fila, além de exibir o menu de opções. Na função 
-principal, são inicializados os valores da fila e executado um loop para exibir o 
-menu e processar as opções do usuário. As funções fila_entrar() e fila_sair() são 
-responsáveis por adicionar e remover elementos da fila, respectivamente, com 
-verificações de capacidade e vaziedade da fila. A função fila_mostrar() exibe o 
-conteúdo da fila e a função menu_mostrar() apresenta as opções disponíveis ao 
-usuário. O programa continua em execução até que o usuário escolha sair, ao 
+/* No cÃ³digo a seguir, estÃ¡ sendo implementada uma estrutura de fila em C. 
+Inicialmente, sÃ£o incluÃ­das as bibliotecas necessÃ¡rias, como stdio.h e stdlib.h, 
+e definida uma constante para o tamanho mÃ¡ximo da fila. A estrutura da fila Ã© 
+definida atravÃ©s de uma struct que armazena os dados, o Ã­ndice de inÃ­cio e o 
+Ã­ndice de fim da fila. SÃ£o declaradas variÃ¡veis globais e prototipadas as funÃ§Ãµes 
+para entrar, sair e mostrar a fila, alÃ©m de exibir o menu de opÃ§Ãµes. Na funÃ§Ã£o 
+principal, sÃ£o inicializados os valores da fila e executado um loop para exibir o 
+menu e processar as opÃ§Ãµes do usuÃ¡rio. As funÃ§Ãµes fila_entrar() e fila_sair() sÃ£o 
+responsÃ¡veis por adicionar e remover elementos da fila, respectivamente, com 
+verificaÃ§Ãµes de capacidade e vaziedade da fila. A funÃ§Ã£o fila_mostrar() exibe o 
+conteÃºdo da fila e a funÃ§Ã£o menu_mostrar() apresenta as opÃ§Ãµes disponÃ­veis ao 
+usuÃ¡rio. O programa continua em execuÃ§Ã£o atÃ© que o usuÃ¡rio escolha sair, ao 
 digitar "0". */
 
 
@@ -28,17 +28,17 @@ struct tfila {
 	int fim;
 };
 
-//Variáveis globais
+//VariÃ¡veis globais
 struct tfila fila;
 int op;
 
-//Protipação
+//ProtipaÃ§Ã£o
 void fila_entrar();
 void fila_sair();
 void fila_mostrar();
 void menu_mostrar();
 
-//Função principal
+//FunÃ§Ã£o principal
 int main(){
 	setlocale(LC_ALL, "Portuguese");
 	op = 1;
@@ -66,7 +66,7 @@ int main(){
 //Adicionar um elemento no final da Fila
 void fila_entrar(){
 	if (fila.fim == tamanho) {
-		printf("\nA fila está cheia, volte outro dia!\n\n");
+		printf("\nA fila estÃ¡ cheia, volte outro dia!\n\n");
 		system("pause");
 	}
 	else {
@@ -79,7 +79,7 @@ void fila_entrar(){
 //Retirar o primeiro elemento da Fila
 void fila_sair() {
 	if (fila.ini == fila.fim) {
-		printf("\nFila vazia, mas logo aparece alguém!\n\n");
+		printf("\nFila vazia, mas logo aparece alguÃ©m!\n\n");
 		system("pause");
 	}
 	else {
@@ -92,7 +92,7 @@ void fila_sair() {
 	}
 }
 
-//Mostrar o conteúdo da Fila
+//Mostrar o conteÃºdo da Fila
 void fila_mostrar() {
 	int i;
 	printf("[ ");
@@ -102,9 +102,9 @@ void fila_mostrar() {
 	printf("]\n\n");
 }
 
-//Mostrar o menu de opções
+//Mostrar o menu de opÃ§Ãµes
 void menu_mostrar() {
-	printf("\nEscolha uma opção:\n");
+	printf("\nEscolha uma opÃ§Ã£o:\n");
 	printf("1 - Incluir na Fila\n");
 	printf("2 - Excluir da Fila\n");
 	printf("0 - Sair\n\n");
