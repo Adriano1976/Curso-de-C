@@ -20,15 +20,15 @@ typedef struct {
     int fim;
 } PilhaLivros;
 
-//Variáveis globais
+//VariÃ¡veis globais
 PilhaLivros pilha_livros;
 
-//Prototipação
+//PrototipaÃ§Ã£o
 void empilharLivro();
 void desempilharLivro();
 void mostrarLivrosEmpilhados();
 
-//Função principal
+//FunÃ§Ã£o principal
 int main() {
     setlocale(LC_ALL, "Portuguese");
     int opcao = 1;
@@ -39,7 +39,7 @@ int main() {
         system("cls");
         mostrarLivrosEmpilhados();
         printf("\n");
-        printf("Escolha uma opção:\n");
+        printf("Escolha uma opÃ§Ã£o:\n");
         printf("1 - Empilhar livro\n");
         printf("2 - Desempilhar livro\n");
         printf("0 - Sair\n\n");
@@ -61,10 +61,10 @@ int main() {
 //Empilhar um livro na pilha
 void empilharLivro() {
     if (pilha_livros.fim == TAMANHO_PILHA) {
-        printf("\nA pilha de livros está cheia. Não é possível empilhar mais livros.\n\n");
+        printf("\nA pilha de livros estÃ¡ cheia. NÃ£o Ã© possÃ­vel empilhar mais livros.\n\n");
         system("pause");
     } else {
-        printf("\nDigite o código do livro: ");
+        printf("\nDigite o cÃ³digo do livro: ");
         scanf("%d", &pilha_livros.livros[pilha_livros.fim].codigo);
         printf("Digite o nome do livro: ");
         scanf(" %[^\n]s", pilha_livros.livros[pilha_livros.fim].nome);
@@ -77,23 +77,23 @@ void empilharLivro() {
 //Desempilhar um livro da pilha
 void desempilharLivro() {
     if (pilha_livros.inicio == pilha_livros.fim) {
-        printf("\nA pilha de livros está vazia. Não é possível desempilhar.\n\n");
+        printf("\nA pilha de livros estÃ¡ vazia. NÃ£o Ã© possÃ­vel desempilhar.\n\n");
         system("pause");
     } else {
         pilha_livros.fim--;
         printf("\nLivro desempilhado:\n");
-        printf("Código: %d\nNome: %s\nAutor: %s\n\n", pilha_livros.livros[pilha_livros.fim].codigo, pilha_livros.livros[pilha_livros.fim].nome, pilha_livros.livros[pilha_livros.fim].autor);
+        printf("CÃ³digo: %d\nNome: %s\nAutor: %s\n\n", pilha_livros.livros[pilha_livros.fim].codigo, pilha_livros.livros[pilha_livros.fim].nome, pilha_livros.livros[pilha_livros.fim].autor);
     }
 }
 
 //Mostrar os livros empilhados na pilha
 void mostrarLivrosEmpilhados() {
     if (pilha_livros.inicio == pilha_livros.fim) {
-        printf("Não há livros empilhados.\n");
+        printf("NÃ£o hÃ¡ livros empilhados.\n");
     } else {
         printf("Livros empilhados:\n");
         for (int i = pilha_livros.fim - 1; i >= pilha_livros.inicio; i--) {
-            printf("Código: %d, Nome: %s, Autor: %s\n", pilha_livros.livros[i].codigo, pilha_livros.livros[i].nome, pilha_livros.livros[i].autor);
+            printf("CÃ³digo: %d, Nome: %s, Autor: %s\n", pilha_livros.livros[i].codigo, pilha_livros.livros[i].nome, pilha_livros.livros[i].autor);
         }
     }
 }
